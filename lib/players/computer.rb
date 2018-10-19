@@ -56,6 +56,8 @@ module Players
         choice
       end
 
+      # Worked in a sandbox environment, but couldn't get this to play nicely with the valid_move method for some reason...
+
       # def stop_enemy
       #   choice = nil
       #   if board.turn_count.odd?
@@ -82,13 +84,8 @@ module Players
       #   return choice
       # end         #End stop_enemy
 
-
-
-
-
     end     #End def move
   end     #End Class
-
 end   #End Module
 
 
