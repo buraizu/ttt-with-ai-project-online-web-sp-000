@@ -14,7 +14,7 @@ module Players
 
       elsif board.turn_count == 2
         choice = (1..9).to_a.sample
-          
+
 
         sleep 1
         choice
@@ -64,6 +64,18 @@ module Players
 
 end   #End Module
 
+
+
+
+def choice
+  
+end 
+
+
+
+
+
+
       #
       # elsif board.turn_count == 7
       #   choice = stop_enemy
@@ -82,23 +94,31 @@ end   #End Module
 
 
 
-      # def stop_enemy
-        # if board.turn_count.odd?
-
-          # WIN_COMBINATIONS.each do |combo|
-          #   if board.position(combo[0] + 1) == "X" && board.position(combo[1] + 1) == "X"  #&& valid_move?(combo[2] + 1)
-          #     return "#{combo[2] + 1}"
-          #  elsif board.position(combo[1] + 1) == "X" && board.position(combo[2] + 1) == "X"
-          #     return "#{combo[0] + 1}"
-          #  elsif board.position(combo[0] + 1) == "X" && board.position(combo[2] + 1) == "X"
-          #     return "#{combo[1] + 1}"
-
-            # else
-            #   (1..9).to_a.sample
-          #   end
-          # end
-        # end
-      #  end
+      def stop_enemy
+        choice = nil
+        if board.turn_count.odd?
+          WIN_COMBINATIONS.each do |combo|
+            if board.position(combo[0] + 1) == "X" && board.position(combo[1] + 1) == "X" && board.taken?(combo[2] + 1) == false
+              choice = "#{combo[2] + 1}"
+           elsif board.position(combo[1] + 1) == "X" && board.position(combo[2] + 1) == "X" && board.taken?(combo[0] + 1) == false
+              choice = "#{combo[0] + 1}"
+           elsif board.position(combo[0] + 1) == "X" && board.position(combo[2] + 1) == "X" && board.taken?(combo[1] + 1) == false
+              choice = "#{combo[1] + 1}"
+            end
+          end
+        elsif board.turn_count.even?
+          WIN_COMBINATIONS.each do |combo|
+            if board.position(combo[0] + 1) == "O" && board.position(combo[1] + 1) == "O" && board.taken?(combo[2] + 1) == false
+              choice = "#{combo[2] + 1}"
+           elsif board.position(combo[1] + 1) == "O" && board.position(combo[2] + 1) == "O" && board.taken?(combo[0] + 1) == false
+              choice = "#{combo[0] + 1}"
+           elsif board.position(combo[0] + 1) == "O" && board.position(combo[2] + 1) == "O" && board.taken?(combo[1] + 1) == false
+              choice = "#{combo[1] + 1}"
+            end
+          end
+        end
+        choice
+      end         #End stop_enemy
 
 
 
