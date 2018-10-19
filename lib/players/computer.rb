@@ -14,42 +14,41 @@ module Players
 
       elsif board.turn_count == 2
         choice = (1..9).to_a.sample
-        sleep 2
+        sleep 1
         choice
 
       elsif board.turn_count == 3
         choice = (1..9).to_a.sample
-        sleep 2
+        sleep 1
         choice
 
       elsif board.turn_count == 4
         choice = (1..9).to_a.sample
-        sleep 2
+        sleep 1
         choice
 
       elsif board.turn_count == 5
         choice = (1..9).to_a.sample
-        sleep 2
+        sleep 1
         choice
 
       elsif board.turn_count == 6
         choice = (1..9).to_a.sample
-        sleep 2
+        sleep 1
         choice
 
       elsif board.turn_count == 7
         choice = (1..9).to_a.sample
-        sleep 2
+        sleep 1
         choice
 
       elsif board.turn_count == 8
         choice = (1..9).to_a.sample
-        sleep 2
+        sleep 1
         choice
 
       elsif board.turn_count == 9
         choice = (1..9).to_a.sample
-        sleep 2
         choice
       end
 
