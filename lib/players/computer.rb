@@ -60,25 +60,25 @@ module Players
         if board.turn_count.odd?
           WIN_COMBINATIONS.each do |combo|
             if board.position(combo[0] + 1) == "X" && board.position(combo[1] + 1) == "X" && board.taken?(combo[2] + 1) == false
-              choice = (combo[2] + 1).to_s
+              choice = "#{combo[2] + 1}"
            elsif board.position(combo[1] + 1) == "X" && board.position(combo[2] + 1) == "X" && board.taken?(combo[0] + 1) == false
-              choice = (combo[0] + 1).to_s
+              choice = "#{combo[0] + 1}"
            elsif board.position(combo[0] + 1) == "X" && board.position(combo[2] + 1) == "X" && board.taken?(combo[1] + 1) == false
-              choice = (combo[1] + 1).to_s
+              choice = "#{combo[1] + 1}"
             end
           end
         elsif board.turn_count.even?
           WIN_COMBINATIONS.each do |combo|
             if board.position(combo[0] + 1) == "O" && board.position(combo[1] + 1) == "O" && board.taken?(combo[2] + 1) == false
-              choice = (combo[2] + 1).to_s
+              choice = "#{combo[2] + 1}"
            elsif board.position(combo[1] + 1) == "O" && board.position(combo[2] + 1) == "O" && board.taken?(combo[0] + 1) == false
-              choice = (combo[0] + 1).to_s
+              choice = "#{combo[0] + 1}"
            elsif board.position(combo[0] + 1) == "O" && board.position(combo[2] + 1) == "O" && board.taken?(combo[1] + 1) == false
-              choice = (combo[1] + 1).to_s
+              choice = "#{combo[1] + 1}"
             end
           end
         end
-        choice
+        return choice
       end         #End stop_enemy
 
 
