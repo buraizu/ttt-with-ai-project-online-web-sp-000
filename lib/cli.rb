@@ -13,7 +13,9 @@ class Cli
         elsif input == "2"
           game = Game.new(Players::Human.new("X"), Players::Human.new("O"))
           game.play
-        elsif input == 'exit'
+        elsif input.downcase == nil && input == 'exit'
+          break
+        elsif input.downcase! == 'exit'
           break
 
         end
