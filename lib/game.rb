@@ -93,39 +93,4 @@ class Game
     end
   end
 
-
-
-  # def play
-  #   while !over?
-  #     puts "#{player}:  "
-  #     turn
-  #     @board.display
-  #   end
-  #
-  #   if won?
-  #     puts "Congratulations #{winner}!"
-  #   else
-  #     puts "Cats Game!"
-  #   end
-  # end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 end
