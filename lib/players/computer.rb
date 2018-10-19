@@ -15,7 +15,7 @@ module Players
       elsif board.turn_count == 2
         unless valid_move?(1..9).to_a.sample == true
           (1..9)to_a.sample
-          
+
         sleep 2
         choice
 
@@ -53,12 +53,16 @@ module Players
         choice = (1..9).to_a.sample
         sleep 2
         choice
+      end
 
 
 
-        
 
 
+    end     #End def Move
+  end     #End Class 
+
+end   #End Module
 
       #
       # elsif board.turn_count == 7
@@ -76,7 +80,7 @@ module Players
       #   sleep 2
       #   choice
 
-      end
+      
 
       # def stop_enemy
         # if board.turn_count.odd?
@@ -102,10 +106,7 @@ module Players
 
 
 
-    end
-  end
 
-end
 
 # [0,1,2],  # Top Row
 # [3,4,5],  # Middle Row
@@ -152,6 +153,4 @@ end
   #   sleep 2
   #   choice
 
-  def choice
-    (1..9).to_a.sample
-  end
+  
