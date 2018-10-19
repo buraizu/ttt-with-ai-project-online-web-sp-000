@@ -8,6 +8,15 @@ class Cli
           game = Game.new(Players::Computer.new("X"), Players::Computer.new("O"))
           game.play
         elsif input == "1"
+          puts "Enter 'first' to be X, or 'second' to be O."
+          input2 = gets.chomp
+            if input2 == "first" || input2.downcase! == "first"
+              game = Game.new(Players::Human.new("X"), Players::Computer.new("O"))
+              game.play
+            elsif input2 == "second" || input2.downcase! == "second"
+              game = Game.new(Players::Computer.new("X"), Players::Human.new("O"))
+              game.play
+            end
           game = Game.new(Players::Computer.new("X"), Players::Human.new("O"))
           game.play
         elsif input == "2"
