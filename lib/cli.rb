@@ -24,9 +24,8 @@ class Cli
         elsif input == 'exit' || input.downcase! == 'exit'
           break
         end
+      end  
 
-    end
+  end   #End play_game
 
-  end
-
-end
+end   #End class
