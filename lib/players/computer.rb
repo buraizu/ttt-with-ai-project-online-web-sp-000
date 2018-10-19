@@ -13,7 +13,7 @@ module Players
         choice
 
       elsif board.turn_count == 2
-        unless valid_move?(1..9).to_a.sample == true
+        if valid_move?(1..9).to_a.sample == true
           (1..9)to_a.sample
 
         sleep 2
