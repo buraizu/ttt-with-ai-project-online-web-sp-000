@@ -59,11 +59,11 @@ module Players
         
           WIN_COMBINATIONS.each do |combo|
             if board.position(combo[0] + 1) == "X" && board.position(combo[1] + 1) == "X"  #&& valid_move?(combo[2] + 1)
-              puts "#{combo[2] + 1}"
+              return "#{combo[2] + 1}"
            elsif board.position(combo[1] + 1) == "X" && board.position(combo[2] + 1) == "X"
-              puts "#{combo[0] + 1}"
+              return "#{combo[0] + 1}"
            elsif board.position(combo[0] + 1) == "X" && board.position(combo[2] + 1) == "X"
-              puts"#{combo[1] + 1}"
+              return "#{combo[1] + 1}"
 
             # else
             #   (1..9).to_a.sample
@@ -106,3 +106,9 @@ end
 #       return combo[1] + 1
 #     end
 #   end
+
+
+elsif board.turn_count == 8
+  choice = (1..9).to_a.sample
+  sleep 2
+  choice
