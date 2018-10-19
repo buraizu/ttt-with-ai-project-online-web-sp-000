@@ -4,37 +4,37 @@ module Players
     def move(board)
       if board.turn_count == 0
         choice = "5"
-        sleep 1
+        sleep 0.5
         choice
 
       elsif board.turn_count == 1
         choice = "3"
-        sleep 1
+        sleep 0.5
         choice
 
       elsif board.turn_count == 2
         choice = (1..9).to_a.sample
-        sleep 1
+        sleep 0.5
         choice
 
       elsif board.turn_count == 3
         choice = (1..9).to_a.sample
-        sleep 1
+        sleep 0.5
         choice
 
       elsif board.turn_count == 4
         choice = (1..9).to_a.sample
-        sleep 1
+        sleep 0.5
         choice
 
       elsif board.turn_count == 5
         choice = (1..9).to_a.sample
-        sleep 1
+        sleep 0.5
         choice
 
       elsif board.turn_count == 6
         choice = (1..9).to_a.sample
-        sleep 1
+        sleep 0.5
         choice
 
       elsif board.turn_count == 7
