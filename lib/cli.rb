@@ -15,7 +15,6 @@ class Cli
           game.play
         elsif input == 'exit' || input.downcase! == 'exit'
           break
-
         end
 
     end
