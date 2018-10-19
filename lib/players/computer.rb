@@ -13,45 +13,43 @@ module Players
         choice
 
       elsif board.turn_count == 2
-        choice = stop_enemy
-
-
-        sleep 1
+        choice = (1..9).to_a.sample
+        sleep 2
         choice
 
       elsif board.turn_count == 3
-        choice = stop_enemy
-        sleep 1
+        choice = (1..9).to_a.sample
+        sleep 2
         choice
 
       elsif board.turn_count == 4
-        choice = stop_enemy
-        sleep 1
+        choice = (1..9).to_a.sample
+        sleep 2
         choice
 
       elsif board.turn_count == 5
-        choice = stop_enemy
-        sleep 1
+        choice = (1..9).to_a.sample
+        sleep 2
         choice
 
       elsif board.turn_count == 6
-        choice = stop_enemy
-        sleep 1
+        choice = (1..9).to_a.sample
+        sleep 2
         choice
-
+        
       elsif board.turn_count == 7
-        choice = stop_enemy
-        sleep 1
+        choice = (1..9).to_a.sample
+        sleep 2
         choice
 
       elsif board.turn_count == 8
-        choice = stop_enemy
-        sleep 1
+        choice = (1..9).to_a.sample
+        sleep 2
         choice
 
       elsif board.turn_count == 9
-        choice = stop_enemy
-        sleep 1
+        choice = (1..9).to_a.sample
+        sleep 2
         choice
       end
 
