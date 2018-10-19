@@ -13,44 +13,44 @@ module Players
         choice
 
       elsif board.turn_count == 2
-        choice = stop_enemy || (1..9).to_a.sample
+        choice = stop_enemy
 
 
         sleep 1
         choice
 
       elsif board.turn_count == 3
-        choice = stop_enemy || (1..9).to_a.sample
+        choice = stop_enemy 
         sleep 1
         choice
 
       elsif board.turn_count == 4
-        choice = stop_enemy || (1..9).to_a.sample
+        choice = stop_enemy 
         sleep 1
         choice
 
       elsif board.turn_count == 5
-        choice = stop_enemy || (1..9).to_a.sample
+        choice = stop_enemy 
         sleep 1
         choice
 
       elsif board.turn_count == 6
-        choice = stop_enemy || (1..9).to_a.sample
+        choice = stop_enemy
         sleep 1
         choice
 
       elsif board.turn_count == 7
-        choice = stop_enemy || (1..9).to_a.sample
+        choice = stop_enemy
         sleep 1
         choice
 
       elsif board.turn_count == 8
-        choice = stop_enemy || (1..9).to_a.sample
+        choice = stop_enemy
         sleep 1
         choice
 
-      elsif board.turn_count == 8
-        choice = stop_enemy || (1..9).to_a.sample
+      elsif board.turn_count == 9
+        choice = stop_enemy
         sleep 1
         choice
       end
@@ -60,21 +60,21 @@ module Players
         if board.turn_count.odd?
           WIN_COMBINATIONS.each do |combo|
             if board.position(combo[0] + 1) == "X" && board.position(combo[1] + 1) == "X" && board.taken?(combo[2] + 1) == false
-              choice = combo[2] + 1
+              choice = (combo[2] + 1).to_i
            elsif board.position(combo[1] + 1) == "X" && board.position(combo[2] + 1) == "X" && board.taken?(combo[0] + 1) == false
-              choice = combo[0] + 1
+              choice = (combo[0] + 1).to_i
            elsif board.position(combo[0] + 1) == "X" && board.position(combo[2] + 1) == "X" && board.taken?(combo[1] + 1) == false
-              choice = combo[1] + 1
+              choice = (combo[1] + 1).to_i
             end
           end
         elsif board.turn_count.even?
           WIN_COMBINATIONS.each do |combo|
             if board.position(combo[0] + 1) == "O" && board.position(combo[1] + 1) == "O" && board.taken?(combo[2] + 1) == false
-              choice = combo[2] + 1
+              choice = (combo[2] + 1).to_i
            elsif board.position(combo[1] + 1) == "O" && board.position(combo[2] + 1) == "O" && board.taken?(combo[0] + 1) == false
-              choice = combo[0] + 1
+              choice = (combo[0] + 1).to_i
            elsif board.position(combo[0] + 1) == "O" && board.position(combo[2] + 1) == "O" && board.taken?(combo[1] + 1) == false
-              choice = combo[1] + 1
+              choice = (combo[1] + 1).to_i
             end
           end
         end
