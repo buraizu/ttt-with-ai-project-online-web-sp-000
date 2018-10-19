@@ -7,8 +7,8 @@ module Players
         sleep 0.5
         choice
 
-      elsif board.turn_count == 1
-        choice = "3"
+      elsif board.turn_count == 1 && board.taken?(5) == false
+        choice = "5"
         sleep 0.5
         choice
 
