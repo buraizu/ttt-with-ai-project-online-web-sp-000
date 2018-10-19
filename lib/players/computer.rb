@@ -13,7 +13,9 @@ module Players
         choice
 
       elsif board.turn_count == 2
-        choice = (1..9).to_a.sample
+        unless valid_move?(1..9).to_a.sample == true
+          (1..9)to_a.sample
+          
         sleep 2
         choice
 
@@ -54,7 +56,7 @@ module Players
 
 
 
-
+        
 
 
 
@@ -149,3 +151,7 @@ end
   #   choice = "9"
   #   sleep 2
   #   choice
+
+  def choice
+    (1..9).to_a.sample
+  end
