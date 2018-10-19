@@ -93,9 +93,7 @@ end   #End Module
 
 
 
-def choice
 
-end
 
 
 
