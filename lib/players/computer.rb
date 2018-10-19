@@ -13,8 +13,8 @@ module Players
         choice
 
       elsif board.turn_count == 2
-        choice = (1..9).to_a.sample == true
-          (1..9)to_a.sample
+        choice = (1..9).to_a.sample
+          
 
         sleep 2
         choice
