@@ -76,23 +76,23 @@ module Players
 
       end
 
-      def stop_enemy
+      # def stop_enemy
         # if board.turn_count.odd?
 
-          WIN_COMBINATIONS.each do |combo|
-            if board.position(combo[0] + 1) == "X" && board.position(combo[1] + 1) == "X"  #&& valid_move?(combo[2] + 1)
-              return "#{combo[2] + 1}"
-           elsif board.position(combo[1] + 1) == "X" && board.position(combo[2] + 1) == "X"
-              return "#{combo[0] + 1}"
-           elsif board.position(combo[0] + 1) == "X" && board.position(combo[2] + 1) == "X"
-              return "#{combo[1] + 1}"
+          # WIN_COMBINATIONS.each do |combo|
+          #   if board.position(combo[0] + 1) == "X" && board.position(combo[1] + 1) == "X"  #&& valid_move?(combo[2] + 1)
+          #     return "#{combo[2] + 1}"
+          #  elsif board.position(combo[1] + 1) == "X" && board.position(combo[2] + 1) == "X"
+          #     return "#{combo[0] + 1}"
+          #  elsif board.position(combo[0] + 1) == "X" && board.position(combo[2] + 1) == "X"
+          #     return "#{combo[1] + 1}"
 
             # else
             #   (1..9).to_a.sample
-            end
-          end
+          #   end
+          # end
         # end
-       end
+      #  end
 
 
 
