@@ -18,8 +18,6 @@ class Cli
               game = Game.new(Players::Computer.new("X"), Players::Human.new("O"))
               game.play
             end
-          game = Game.new(Players::Computer.new("X"), Players::Human.new("O"))
-          game.play
         elsif input == "2"
           game = Game.new(Players::Human.new("X"), Players::Human.new("O"))
           game.play
