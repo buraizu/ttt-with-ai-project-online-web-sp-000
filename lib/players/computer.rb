@@ -39,7 +39,6 @@ module Players
 
       elsif board.turn_count == 7
         choice = (1..9).to_a.sample
-        sleep 1
         choice
 
       elsif board.turn_count == 8
