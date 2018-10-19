@@ -58,7 +58,7 @@ module Players
         # if board.turn_count.odd?
           enemy = "X"
           WIN_COMBINATIONS.each do |combo|
-            if board.position(combo[0] + 1) == "X" && board.position(combo[1] + 1) == "X" && valid_move?(combo[2] + 1)
+            if board.position(combo[0] + 1) == "X" && board.position(combo[1] + 1) == "X"  #&& valid_move?(combo[2] + 1)
               puts "#{combo[2] + 1}"
            elsif board.position(combo[1] + 1) == "X" && board.position(combo[2] + 1) == "X"
               puts "#{combo[0] + 1}"
