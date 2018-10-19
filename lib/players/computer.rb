@@ -59,8 +59,8 @@ module Players
 
 
 
-    end     #End def Move
-  end     #End Class 
+    end     #End def move
+  end     #End Class
 
 end   #End Module
 
@@ -80,7 +80,7 @@ end   #End Module
       #   sleep 2
       #   choice
 
-      
+
 
       # def stop_enemy
         # if board.turn_count.odd?
@@ -152,5 +152,3 @@ end   #End Module
   #   choice = "9"
   #   sleep 2
   #   choice
-
-  
