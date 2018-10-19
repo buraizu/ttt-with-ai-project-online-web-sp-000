@@ -12,6 +12,11 @@ module Players
         sleep 0.5
         choice
 
+      elsif board.turn_count == 1 && board.taken?(5)
+        choice = "3"
+        sleep 0.5
+        choice
+
       elsif board.turn_count == 2
         choice = (1..9).to_a.sample
         sleep 0.5
