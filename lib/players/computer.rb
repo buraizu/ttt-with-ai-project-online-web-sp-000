@@ -18,7 +18,7 @@ module Players
         choice
 
       elsif board.turn_count == 3
-        choice = stop_enemy
+        choice = stop_enemy.to_i
         sleep 2
         choice
 
@@ -28,7 +28,7 @@ module Players
         choice
 
       elsif board.turn_count == 5
-        choice = stop_enemy
+        choice = stop_enemy.to_i
         sleep 2
         choice
 
