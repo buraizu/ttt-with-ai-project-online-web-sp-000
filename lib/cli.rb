@@ -13,7 +13,8 @@ class Cli
             if input2 == "first" || input2.downcase! == "first"
               game = Game.new(Players::Human.new("X"), Players::Computer.new("O"))
               game.play
-            elsif input2 == "second" || input2.downcase! == "second"
+            end
+            if input2 == "second" || input2.downcase! == "second"
               game = Game.new(Players::Computer.new("X"), Players::Human.new("O"))
               game.play
             end
